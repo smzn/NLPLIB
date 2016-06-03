@@ -1,0 +1,24 @@
+
+<html>
+<head><title>非線形計画法</title>
+<link rel="stylesheet" type="text/css" href="bbs.css">
+</head>
+<body bgcolor="#ffffff" text="#000000">
+
+<p>最急降下法(steepest descent method)</p>
+
+<form method="POST" action="NLPLIB_Servlet">
+最適化手法：最急降下法<input type="hidden" name="opttype" size="30" value = "1"><br>
+対象関数：f(x) = x<sub>1</sub><sup>2</sup> + (x<sub>2</sub> -1)<sup>4</sup> + x<sub>1</sub><br>
+変数の数：<input type="text" name="varnum" size="30" value = "2"><br>
+初期点x<sub>1</sub>：<input type="text" name="initx1" size="30" value = "-1.0"><br>
+初期点x<sub>2</sub>：<input type="text" name="initx2" size="30" value = "0.5"><br>
+直線探索基準：(Armijo = 0, Wolfe = 1, 固定(0.5) = 2)<input type="text" name="search" size="30" value = "0"><br>
+反復回数上限：<input type="text" name="roopnum" size="30" value = "500"><br>
+収束条件：<input type="text" name="conv" size="30" value = "0.001"><br>
+x<sub>1</sub>偏微分：2x<sub>1</sub> + 1<br>
+x<sub>2</sub>偏微分：4(x<sub>2</sub> -1)<sup>3</sup><br>
+<input type="submit" name="btn1" value="実行">
+</form>
+</body>
+</html>

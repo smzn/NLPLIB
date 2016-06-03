@@ -1,0 +1,29 @@
+
+<html>
+<head><title>非線形計画法</title>
+<link rel="stylesheet" type="text/css" href="bbs.css">
+</head>
+<body bgcolor="#ffffff" text="#000000">
+
+<p>準ニュートン(quasi-Newton method)</p>
+
+<form method="POST" action="NLPLIB_Servlet">
+最適化手法：準ニュートン法(BFGS)<input type="hidden" name="opttype" size="30" value = "2"><br>
+対象関数：f(x) = 1/2(x<sub>1</sub> - x<sub>2</sub><sup>2</sup>)<sup>2</sup> + 1/4(x<sub>2</sub> - 2)<sup>4</sup><br>
+変数の数：<input type="text" name="varnum" size="30" value = "2"><br>
+初期点x<sub>1</sub>：<input type="text" name="initx1" size="30" value = "0.0"><br>
+初期点x<sub>2</sub>：<input type="text" name="initx2" size="30" value = "0.0"><br>
+初期B0 : b<sub>11</sub>：<input type="text" name="b11" size="30" value = "1.0"><br>
+初期B0 : b<sub>12</sub>：<input type="text" name="b12" size="30" value = "-2.0"><br>
+初期B0 : b<sub>21</sub>：<input type="text" name="b21" size="30" value = "-2.0"><br>
+初期B0 : b<sub>22</sub>：<input type="text" name="b22" size="30" value = "12.0"><br>
+
+直線探索基準：(Armijo = 0, Wolfe = 1, 固定(1.0) = 2)<input type="text" name="search" size="30" value = "2"><br>
+反復回数上限：<input type="text" name="roopnum" size="30" value = "70"><br>
+収束条件：<input type="text" name="conv" size="30" value = "0.001"><br>
+x<sub>1</sub>偏微分：x<sub>1</sub> - x<sub>2</sub><sup>2</sup><br>
+x<sub>2</sub>偏微分：-2x<sub>2</sub>(x<sub>1</sub> - x<sub>2</sub><sup>2</sup>) + (x<sub>2</sub> - 2)<sup>3</sup><br>
+<input type="submit" name="btn1" value="実行">
+</form>
+</body>
+</html>
